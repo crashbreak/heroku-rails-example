@@ -2,6 +2,21 @@
 
 <h1>Listing Projects</h1>
 
+<%= form_for(:salary, method: :get) do |f| %>
+    <div class="field">
+      <%= f.label 'Total budget' %><%= f.label " #{cookies[:budget]}" %><br>
+      <%= f.text_field :budget %>
+    </div>
+    <div class="field">
+      <%= f.label 'Salary amount per project' %><%= f.label " #{cookies[:amount]}" %><br>
+      <%= f.text_field :amount %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
+
 <table>
   <thead>
     <tr>

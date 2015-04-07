@@ -1,4 +1,7 @@
 <%= form_for(@project) do |f| %>
+  <div class="field">
+    <%= f.label "You can crete #{params[:available_project_count]} more projects" %>
+  </div>
   <% if @project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
