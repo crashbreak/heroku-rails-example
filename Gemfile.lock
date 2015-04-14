@@ -71,6 +71,9 @@ GEM
       sidekiq
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
+    dotenv (2.0.1)
+    dotenv-rails (2.0.1)
+      dotenv (= 2.0.1)
     erubis (2.7.0)
     execjs (2.5.0)
     faraday (0.9.1)
@@ -206,6 +209,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   crashbreak
+  dotenv-rails
   jquery-rails
   pg
   rails (= 4.2.1.rc4)

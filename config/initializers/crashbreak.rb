@@ -17,5 +17,5 @@ Crashbreak.configure do |config|
         "curl -o #{Rails.root}/tmp/db.dump `/app/vendor/heroku-toolbelt/bin/heroku pg:backups public-url --app crashbreak-rails-example`"
   }
 
-  config.restorer_options = { restore_command: "pg_restore #{Rails.root}/tmp/db.dump -d crashbreak-test" }
+  config.restorer_options = { restore_command: "pg_restore -O #{Rails.root}/tmp/db.dump -d crashbreak-test" }
 end
