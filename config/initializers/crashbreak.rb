@@ -10,8 +10,6 @@ Crashbreak.configure do |config|
   config.dumper_options = {
       aws_bucket_name: 'cb-test-app',
       aws_region: 'us-east-1',
-      aws_access_key_id: 'fake_aws_key_id',
-      aws_secret_access_key: 'fake_aws_secret_key',
 
       dump_location: "#{Rails.root}/tmp/db.dump",
       dump_command:
