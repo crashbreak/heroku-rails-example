@@ -18,4 +18,8 @@ Crashbreak.configure do |config|
   }
 
   config.restorer_options = { restore_command: "pg_restore -O #{Rails.root}/tmp/db.dump -d crashbreak-test" }
+
+  # config.github_login = 'your-company-crashbreak-bot'
+  # config.github_password = 'password'
+  # config.github_repo_name = 'crashbreak/heroku-rails-example'
 end
