@@ -1,5 +1,5 @@
 Crashbreak.configure do |config|
-  config.api_key = 'Ai-_TqHX3EmueSKcl67X2g'
+  config.api_key = 'iI6pLu1uY8RJQmpiSMxR9Q'
 
   # config.exception_notifier = Crashbreak::ExceptionNotifier.new
   config.exception_notifier = Crashbreak::AsyncExceptionNotifier # use sidekiq
