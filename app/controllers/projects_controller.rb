@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1
   def show
-    @project.name[0].upcase if @project.name.length > 0
+    @project.name[0].upcase
   end
 
   # GET /projects/new
