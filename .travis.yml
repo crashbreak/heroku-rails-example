@@ -12,3 +12,9 @@ script:
 
 addons:
   postgresql: "9.3"
+
+services:
+  - redis-server
+
+after_success:
+  - bundle exec rake crashbreak:resolve_error
