@@ -2,7 +2,7 @@ Crashbreak.configure do |config|
   config.api_key = ENV['CRASHBREAK_TOKEN']
 
   # config.exception_notifier = Crashbreak::ExceptionNotifier.new
-  config.exception_notifier = Crashbreak::AsyncExceptionNotifier # use sidekiq
+  config.exception_notifier = Crashbreak::ForkExceptionNotifier.new # use sidekiq
 
   config.error_serializers = [Crashbreak::DefaultSummaryFormatter.new, Crashbreak::EnvironmentVariablesFormatter.new]
   config.dumpers = [RequestDumper.new, Crashbreak::DatabaseDumper.new]
