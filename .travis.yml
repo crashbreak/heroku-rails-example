@@ -8,6 +8,7 @@ before_script:
   - bundle exec rake db:migrate
 
 script:
+  - bundle exec crashbreak:run_test
   - bundle exec rspec
 
 addons:
