@@ -16,6 +16,7 @@ addons:
 
 services:
   - redis-server
+  - mongodb
 
 after_success:
   - bundle exec rake crashbreak:resolve_error
