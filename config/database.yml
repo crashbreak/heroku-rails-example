@@ -11,6 +11,10 @@ test:
   <<: *default
   database: heroku_rails_example_test
 
+crashbreak_test:
+  <<: *default
+  database: crashbreak-test
+
 production:
   <<: *default
   database: heroku_rails_example_production

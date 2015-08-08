@@ -133,3 +133,14 @@ test:
         read:
           mode: primary
         max_pool_size: 1
+
+crashbreak_test:
+  clients:
+    default:
+      database: crashbreak-test
+      hosts:
+        - localhost:27017
+      options:
+        read:
+          mode: primary
+        max_pool_size: 1
