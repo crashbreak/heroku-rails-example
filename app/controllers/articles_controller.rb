@@ -23,6 +23,8 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
 
+    raise MyCustomError if Article.where(name: 'My last article for 100%').any?
+
     if @article.save
       redirect_to @article, notice: 'Article was successfully created.'
     else
@@ -55,4 +57,6 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:name, :content)
     end
+
+  class MyCustomError < StandardError; end
 end

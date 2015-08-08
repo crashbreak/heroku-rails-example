@@ -17,9 +17,9 @@ Crashbreak.configure do |config|
   config.github_repo_name = 'crashbreak/heroku-rails-example'
 end
 
-if Rails.env.development?
-  Crashbreak::PredefinedSettings.new.postgresql('heroku_rails_example_development')
-else
+if Rails.env.production?
   Crashbreak::PredefinedSettings.new.heroku_postgresql('Gold', 'crashbreak-rails-example')
+else
+  Crashbreak::PredefinedSettings.new.mongodb('heroku_rails_example_development_mongo')
 end
 
