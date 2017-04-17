@@ -68,6 +68,8 @@ class ProjectsController < ApplicationController
   end
 
   def set_available_project_count
+    return if cookies[:amount].to_i == 0
+    
     if cookies[:budget] && cookies[:amount]
       params[:available_project_count] = (cookies[:budget].to_i / cookies[:amount].to_i) - Project.count
     end
